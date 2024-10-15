@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -6,8 +7,13 @@
     <title>NN</title>
 </head>
 <body>
-    <h1>aici bagi norma</h1>
-    <input type="text">
-    <h2> si aici nush cum sa arat poza cu fata :D</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">submit</button>
+    </form> 
+    {% if valid and image_url %}
+    <img src="{% static image_url %}" alt="">
+    {% endif %}
 </body>
 </html>
