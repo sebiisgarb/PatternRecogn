@@ -141,7 +141,7 @@ norma = 2
 k = 5  # Numărul de vecini pentru kNN
 
 # Implementare cross-validation cu k-fold (de exemplu, k=5)
-kf = KFold(n_splits=8, shuffle=True, random_state=42)
+kf = KFold(n_splits=5, shuffle=True, random_state=42)
 
 
 # Variabile pentru a stoca acuratețea pentru NN și kNN
